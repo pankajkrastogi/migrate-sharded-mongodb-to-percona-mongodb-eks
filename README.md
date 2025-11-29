@@ -1,7 +1,7 @@
 # Migrating Self-Managed Sharded MongoDB Cluster on EC2 to Percona Server for MongoDB on EKS
 
 # Overview
-Community-focused, end-to-end guide and IaC blueprint to migrate from a self-managed, sharded MongoDB cluster on EC2 to an operator-driven, Kubernetes-native deployment with Percona Server for MongoDB on Amazon EKS. Includes architecture, deployment workflow, sanitised Terraform/Helm examples, operational runbooks, lessons learned, and references.
+Community-focused, end-to-end guide and IaC blueprint to migrate from a self-managed, sharded MongoDB cluster on EC2 to an operator-driven, Kubernetes-native deployment with Percona Server for MongoDB on Amazon EKS. Includes architecture, deployment workflow, Terraform/Helm examples, operational runbooks, lessons learned, and references.
 
 # Purpose
 - Provide a practical, repeatable path for migrating sharded MongoDB to Percona on EKS.
@@ -68,7 +68,7 @@ Community-focused, end-to-end guide and IaC blueprint to migrate from a self-man
 - CI/CD workflow (GitHub Actions or similar), step-by-step:
   - Deployment Workflow Guide: <add-link-to-your-detailed-workflow-doc>
 
-# Sample Terraform: Helm-based Percona MongoDB on EKS (sanitised)
+# Sample Terraform: Helm-based Percona MongoDB on EKS
 - Uses the public Percona Helm repository, generic variables, IRSA, and avoids environment-specific references.
 - For production, enable TLS (requireSSL) and manage secrets via a secrets manager.
 
@@ -325,7 +325,6 @@ resource "helm_release" "percona_mongodb" {
 
 # Contributions
 - Contributions are welcome. Share tuning tips, deployment examples, and lessons learned to help others shorten their path to production.
-- Please sanitise examples and avoid committing secrets or environment-specific details.
 
 # Public references
 - Percona Operator for MongoDB on EKS: https://www.percona.com/doc/kubernetes-operator-for-psmongodb/index.html
